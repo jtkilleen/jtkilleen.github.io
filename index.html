@@ -227,5 +227,128 @@
 		<iframe width="420" height="315" src="//www.youtube.com/embed/CVke__4OZ-0" frameborder="0" allowfullscreen></iframe>
 </section>
 
+<section class="BurpGraph">
+ <h3>
+<a class="anchor" href="#Burp"></a>Number of Burps</h3>
+<script type="text/javascript">
+  
+			//Width and height
+			var w = 500;
+			var h = 100;
+			var barPadding = 100;
+			
+			var dataset = [ 5,55];
+			
+			//Create SVG element
+			var svg = d3.select("section.BurpGraph")
+						.append("svg")
+						.attr("width", w)
+						.attr("height", h);
+
+			svg.selectAll("rect")
+			   .data(dataset)
+			   .enter()
+			   .append("rect")
+			   .attr("x", function(d, i) {
+			   		return i * (w / dataset.length);
+			   })
+			   .attr("y", function(d) {
+			   		return h - (d * 4);
+			   })
+			   .attr("width", w / 10 )
+			   .attr("height", function(d) {
+			   		return d * 4;
+			   })
+			   .attr("fill", function(d) {
+					return "rgb(0, 0, " + (d * 10) + ")";
+			   });
+
+			svg.selectAll("text")
+			   .data(dataset)
+			   .enter()
+			   .append("text")
+			   .text(function(d) {
+			   		return d;
+			   })
+			   .attr("text-anchor", "middle")
+			   .attr("x", function(d, i) {
+			   		return i * (w / dataset.length) + (w / dataset.length - barPadding) / 2;
+			   })
+			   .attr("y", function(d) {
+			   		return h-50;
+			   })
+			   .attr("font-family", "sans-serif")
+			   .attr("font-size", "25px")
+			   .attr("fill", "red");
+
+
+			
+		</script>
+		<p>It is nothing short of amazing that you have burped as much as you have without being able to do it on command.</p>
+		</section>
+		
+		<section class="FreakGraph">
+ <h3>
+<a class="anchor" href="#Freak"></a>Number of Times Looking Like a FREAK</h3>
+<script type="text/javascript">
+  
+			//Width and height
+			var w = 500;
+			var h = 100;
+			var barPadding = 100;
+			
+			var dataset = [ 47,76];
+			
+			//Create SVG element
+			var svg = d3.select("section.FreakGraph")
+						.append("svg")
+						.attr("width", w)
+						.attr("height", h);
+
+			svg.selectAll("rect")
+			   .data(dataset)
+			   .enter()
+			   .append("rect")
+			   .attr("x", function(d, i) {
+			   		return i * (w / dataset.length);
+			   })
+			   .attr("y", function(d) {
+			   		return h - (d);
+			   })
+			   .attr("width", w / 10 )
+			   .attr("height", function(d) {
+			   		return d*4;
+			   })
+			   .attr("fill", function(d) {
+					return "rgb(0, 0, " + (d * 10) + ")";
+			   });
+
+			svg.selectAll("text")
+			   .data(dataset)
+			   .enter()
+			   .append("text")
+			   .text(function(d) {
+			   		return d;
+			   })
+			   .attr("text-anchor", "middle")
+			   .attr("x", function(d, i) {
+			   		return i * (w / dataset.length) + (w / dataset.length - barPadding) / 2;
+			   })
+			   .attr("y", function(d) {
+			   		return h-50;
+			   })
+			   .attr("font-family", "sans-serif")
+			   .attr("font-size", "25px")
+			   .attr("fill", "red");
+
+
+			
+		</script>
+		<p>Ah, here's a more even match up between the two of us.  We are both really weird, really weird... <em><b>REALLY</b></em> weird.
+		I mean, who would quote this? </p>
+		<iframe width="560" height="315" src="//www.youtube.com/embed/VF9-sEbqDvU" frameborder="0" allowfullscreen></iframe>
+		<p>"See, you're weird. But I am too, so that's great."</p>
+		</section>
+
 </body>
 </html>
