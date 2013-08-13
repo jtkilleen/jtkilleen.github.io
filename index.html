@@ -15,8 +15,8 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>Jtkilleen.github.io</h1>
-        <p>Website</p>
+        <h1>HELLO LINDSAY!</h1>
+        <p>Website started 8/11/2013</p>
 
 
         <p class="view"><a href="https://github.com/jtkilleen">View My GitHub Profile</a></p>
@@ -24,9 +24,146 @@
       </header>
       <section>
         <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Where to begin?</h3>
 
-<p>This is the page for my portfolio, hello!</p>
+<p>So, you told me around our five month dateversary that you wanted my analysis of our relationship thus
+	far, but I figured that a simple piece of paper wouldn't be good enough for you (It wasn't for me).</p>
+	<p>Also, it doesn't help that my handwriting looks like that of a troll:</p>
+	<a title="Okay, maybe not that bad."><img src="pics/handwriting.jpg" width="400" height="300" alt="Ok, maybe not that bad"></a>
+	<p>But you get my point.</p>
 </section>
+
+<section>
+	<h2 align="center"><a name="Here's another anchor" class = "anchor" href="#Anchor"></a>And Now: An Analysis of the Relationship Between</br> </br> <i>JEFFREY TYLER KILLEEN</i> </br><i>& </i></br><i>LINDSAY RACHEL URBAN</i></br><u>THUS FAR</u></h2>
+		<p>Let's get started, shall we?</p>
+</section>
+
+<section>
+<h1>BAR GRAPHS</h1>
+</br>
+<h3><font color="red"><u>From Now On: Jeff = left, Lindsay = right</u></font></h3>
+</section>
+
+<section class="PimpleGraph">
+ <h3>
+<a class="anchor" href="#Pimple"></a>Pimple Popping Comparison</h3>
+<script type="text/javascript">
+  
+			//Width and height
+			var w = 500;
+			var h = 100;
+			var barPadding = 100;
+			
+			var dataset = [ 2, 200];
+			
+			//Create SVG element
+			var svg = d3.select("section.PimpleGraph")
+						.append("svg")
+						.attr("width", w)
+						.attr("height", h);
+
+			svg.selectAll("rect")
+			   .data(dataset)
+			   .enter()
+			   .append("rect")
+			   .attr("x", function(d, i) {
+			   		return i * (w / dataset.length);
+			   })
+			   .attr("y", function(d) {
+			   		return h - (d * 4);
+			   })
+			   .attr("width", w / 10 )
+			   .attr("height", function(d) {
+			   		return d * 4;
+			   })
+			   .attr("fill", function(d) {
+					return "rgb(0, 0, " + (d * 10) + ")";
+			   });
+
+			svg.selectAll("text")
+			   .data(dataset)
+			   .enter()
+			   .append("text")
+			   .text(function(d) {
+			   		return d;
+			   })
+			   .attr("text-anchor", "middle")
+			   .attr("x", function(d, i) {
+			   		return i * (w / dataset.length) + (w / dataset.length - barPadding) / 2;
+			   })
+			   .attr("y", function(d) {
+			   		return h-50;
+			   })
+			   .attr("font-family", "sans-serif")
+			   .attr("font-size", "25px")
+			   .attr("fill", "red");
+
+
+			
+		</script>
+		<p>Gross...As you can see, you have popped way more pimples on me than I have on you. Moving on...</p>
+</section>
+
+<section class="CryingGraph">
+ <h3>
+<a class="anchor" href="#Pimple"></a>Amount of Times Cried</h3>
+<script type="text/javascript">
+  
+			//Width and height
+			var w = 500;
+			var h = 100;
+			var barPadding = 100;
+			
+			var dataset = [ 19, 3];
+			
+			//Create SVG element
+			var svg = d3.select("section.CryingGraph")
+						.append("svg")
+						.attr("width", w)
+						.attr("height", h);
+
+			svg.selectAll("rect")
+			   .data(dataset)
+			   .enter()
+			   .append("rect")
+			   .attr("x", function(d, i) {
+			   		return i * (w / dataset.length);
+			   })
+			   .attr("y", function(d) {
+			   		return h - (d * 4);
+			   })
+			   .attr("width", w / 10 )
+			   .attr("height", function(d) {
+			   		return d * 4;
+			   })
+			   .attr("fill", function(d) {
+					return "rgb(0, 0, " + (d * 10) + ")";
+			   });
+
+			svg.selectAll("text")
+			   .data(dataset)
+			   .enter()
+			   .append("text")
+			   .text(function(d) {
+			   		return d;
+			   })
+			   .attr("text-anchor", "middle")
+			   .attr("x", function(d, i) {
+			   		return i * (w / dataset.length) + (w / dataset.length - barPadding) / 2;
+			   })
+			   .attr("y", function(d) {
+			   		return h-50;
+			   })
+			   .attr("font-family", "sans-serif")
+			   .attr("font-size", "25px")
+			   .attr("fill", "red");
+
+
+			
+		</script>
+		<p>As you can see, I have cried more than you have cried...Didn't really expect that outcome</p>
+		<iframe width="560" height="315" src="//www.youtube.com/embed/ee925OTFBCA" frameborder="0" allowfullscreen></iframe>
+</section>
+
 </body>
 </html>
